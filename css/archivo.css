@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #5b2e0d; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    header nav #header_nav_logo {
+      background-color: #905C39; }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin-right: 50px; }
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px; }
+      header nav ul li a:hover {
+        background-color: #896A54; }
+    header nav .header_nav_input {
+      padding-left: 10px;
+      outline: none;
+      font-size: 18px;
+      border-radius: 15px;
+      color: black;
+      border: 3px solid #896A54;
+      transition: all 1s;
+      width: 200px; }
+    header nav .header_nav_input:focus {
+      width: 400px;
+      box-shadow: 0.5px 0.5px 2px black; }
+    header nav .header_nav_input:hover {
+      width: 400px;
+      box-shadow: 0.5px 0.5px 2px black; }
+
+h2 {
+  animation-duration: 2s;
+  animation-name: aparecer;
+  margin: 3% 0 3% 0; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+main #main_destacados {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  main #main_destacados .main_destacados_cajas {
+    width: 20%;
+    height: 20%; }
+  main #main_destacados div {
+    text-align: center;
+    transition: all 0.5s; }
+    main #main_destacados div a {
+      text-decoration: none;
+      color: black; }
+      main #main_destacados div a p {
+        display: none;
+        border: 1px solid;
+        letter-spacing: 0.5px;
+        width: 20%;
+        text-align: left;
+        padding: 10px;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 5px black;
+        text-indent: 5px; }
+      main #main_destacados div a img:hover {
+        transition: all 0.5s;
+        transform: scale(1.03, 1.03); }
+    main #main_destacados div a:hover p {
+      display: block;
+      position: absolute; }
+    main #main_destacados div a:hover div {
+      color: blue;
+      font-size: 17px; }
+
+main .main_buscados {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 5% 0 0 2%; }
+  main .main_buscados table {
+    width: 80%; }
+    main .main_buscados table thead {
+      text-align: center; }
+    main .main_buscados table .anchoMedioTabla {
+      width: 45%; }
+
+main form {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas: "usuario" "completar" "enviar";
+  justify-content: start;
+  align-items: center;
+  margin-left: 2%; }
+  main form input {
+    grid-area: usuario;
+    transition: all 1s; }
+  main form input:focus {
+    width: 400px;
+    font-size: 20px; }
+  main form textarea {
+    grid-area: completar; }
+  main form button {
+    grid-area: enviar; }
+
+footer {
+  height: 30vh; }
+  footer .saliente {
+    width: 1vh;
+    height: 50%;
+    position: relative;
+    top: -30vh;
+    transition: all 1s;
+    overflow: hidden;
+    background-color: #633F23;
+    border-radius: 5px; }
+    footer .saliente h5, footer .saliente p {
+      margin-left: 1vh; }
+    footer .saliente h5 {
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); }
+    footer .saliente p {
+      font-size: 12px; }
+  footer .saliente:hover {
+    width: 40%;
+    height: 50%;
+    overflow: hidden;
+    background: white;
+    border-radius: 0 15px 15px 0; }
+  footer #footer {
+    height: 30vh;
+    width: 100%;
+    color: white;
+    background-color: #5b2e0d;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 10fr 4fr 1fr;
+    grid-template-areas: "vacio titulo imagen vacioo" "vacio logo imagen vacioo" "vacio texto publi vacioo"; }
+    footer #footer h4 {
+      grid-area: titulo;
+      align-self: end; }
+    footer #footer .publi {
+      display: flex;
+      flex-direction: row;
+      grid-area: publi; }
+      footer #footer .publi li {
+        margin-left: 1vh; }
+      footer #footer .publi a {
+        text-decoration: none;
+        color: white; }
+    footer #footer p {
+      grid-area: texto; }
+    footer #footer .imagenes {
+      grid-area: imagen;
+      align-self: center; }
+    footer #footer .logo {
+      grid-area: logo;
+      align-self: center; }
+      footer #footer .logo a {
+        font-size: 35px;
+        color: white;
+        border-radius: 50%;
+        transition: all 0.5s;
+        padding: 5px; }
+      footer #footer .logo a:hover {
+        background: rgba(0, 0, 0, 0.3); }
+      footer #footer .logo a:link {
+        text-decoration: none; }

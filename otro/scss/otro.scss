@@ -1,0 +1,182 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #5b2e0d;
+	position: relative;
+	nav{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		#logoInicio{
+			background-color: #905C39;
+				}
+		ul{
+			display: flex;
+			flex-direction: row;
+			list-style-type: none;
+			margin-right: 3%;
+
+			li{
+				a{
+					color: white;
+					text-decoration: none;
+					font-size: 18px;
+					padding:5px;
+				}
+				a:hover{
+					background-color: #896A54;
+					}
+				}
+			}
+		.img{
+			padding-left: 10px;
+			outline: none;
+			font-size: 18px;
+			border-radius: 15px;
+			color: black;
+			border: 3px solid #896A54;
+			transition: all 1s;
+			width: 200px;
+			}
+		.img:focus{
+			width: 400px;
+			box-shadow: 0.5px 0.5px 2px black;
+			}
+
+		.img:hover{
+			width: 400px;
+			box-shadow: 0.5px 0.5px 2px black;
+			}
+		}
+}
+
+@mixin tamaño-posicion($widthF, $heightF, $positionF){
+	width: $widthF;
+	height: $heightF;
+	position: $positionF;
+}
+main{
+	h2{
+		span{
+			color: brown;
+		}
+	}
+	form{
+	display: grid;
+	grid-auto-columns: auto;
+	grid-template-rows: 1fr 3fr 1fr;
+	grid-template-areas: 
+		"usuario"
+		"completar"
+		"enviar";
+	justify-content: start;
+	align-items:center;
+	margin-left: 2%;
+		input{
+			grid-area: usuario;
+			transition: all 1s;
+		}
+		input:focus{
+			width: 400px;
+			font-size: 20px;
+		}
+		textarea{
+			grid-area: completar;
+		}
+		button{
+			grid-area: enviar;
+		}
+
+	}
+}
+
+footer{
+	height: 30vh;
+
+		.saliente{
+			@include tamaño-posicion(1vh, 50%, relative);
+			top: -28vh;
+			transition: all 1s;
+			overflow: hidden;
+			background-color: #633F23;
+			border-radius: 5px;
+
+				h5,p{
+					margin-left: 1vh;
+				}
+				h5{
+					border-bottom: 0.5px solid rgba(0,0,0,0.1);
+				}
+				p{
+					font-size: 12px;
+				}
+			}
+		.saliente:hover{
+			width: 40%;
+			height: 50%;
+			overflow: hidden;
+			background: white;
+			border-radius: 0 15px 15px 0;
+		}
+
+		#footer{
+			@include tamaño-posicion(100%, 30vh, relative);
+			color: white;
+			background-color: #5b2e0d;
+			display: grid;
+			grid-template-rows: 1fr 2fr 1fr;
+			grid-template-columns: 1fr 10fr 4fr 1fr ;
+			grid-template-areas:
+			"vacio titulo imagen vacioo"
+			"vacio logo imagen vacioo"
+			"vacio texto publi vacioo";
+			h4{
+				grid-area: titulo;
+				align-self: end;
+			}
+			.publi{
+				display: flex;
+				flex-direction:row;
+				grid-area: publi;
+				li{
+					margin-left: 1vh;
+					}
+				a{
+					text-decoration: none;
+					color: white;
+					}
+				}
+			p{
+				grid-area: texto;
+
+				}
+			
+			.imagenes{
+				grid-area: imagen;
+				align-self: center;
+
+				}
+			.logo{
+				grid-area: logo;
+				align-self: center;
+					a{
+					font-size: 35px;
+					color: white;
+					border-radius: 50%;
+					transition: all 0.5s;
+					padding: 5px;
+					}
+				a:hover{
+					background: rgba(0,0,0,0.3);
+					}
+				a:link{
+					text-decoration: none;
+					}
+				}
+			}
+
+}

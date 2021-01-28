@@ -1,0 +1,341 @@
+*{
+	margin:0;
+	padding: 0;
+}
+header{
+	background-color: #5b2e0d;
+	position: relative;
+	nav{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		#logoInicio{
+			background-color: #905C39;
+				}
+		ul{
+			display: flex;
+			flex-direction: row;
+			list-style-type: none;
+			margin-right: 3%;
+
+			li{
+				a{
+					color: white;
+					text-decoration: none;
+					font-size: 18px;
+					padding:5px;
+				}
+				a:hover{
+					background-color: #896A54;
+					}
+				}
+			}
+		.img{
+			padding-left: 10px;
+			outline: none;
+			font-size: 18px;
+			border-radius: 15px;
+			color: black;
+			border: 3px solid #896A54;
+			transition: all 1s;
+			width: 200px;
+			}
+		.img:focus{
+			width: 400px;
+			box-shadow: 0.5px 0.5px 2px black;
+			}
+
+		.img:hover{
+			width: 400px;
+			box-shadow: 0.5px 0.5px 2px black;
+			}
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+	#grid{
+		display: grid;
+		grid-template-columns: 1fr auto auto;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			"contenedor contenedor nadaa"
+			"navegador navegador navegador"
+			"nada seccion son";
+
+	.container-fluid{
+		grid-area: contenedor ;
+		}
+	#barras{
+		grid-area: seccion;
+		div{
+			margin-top: 10vh;
+		}
+		}
+	#navegador{
+		grid-area: navegador;
+		position: sticky;
+		top: 0;
+		.navbar_color{
+			background: #95592B;
+		}
+		a{
+			font-size: 17px;
+			}
+		}
+	#redes_personales{
+		@include tamaño-posicion(40vh, 15vh, relative);
+		grid-area: nadaa;
+		box-shadow: 0.5px 0 2px rgba(0,0,0,0.2);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		margin: 5vh;
+		div{
+			width: 35vh;
+			height: 4vh;
+		span{
+			border-right: 1.5px solid brown;
+			padding-right: 2px;
+			}
+		a{
+			text-decoration: none;
+			color: brown;
+			font-size: 17px;
+			}
+			}
+		}
+	#section41{
+		form{
+			width: 45vh;
+			display: flex;
+			flex-direction: column;
+			div{
+				display: flex;
+				justify-content: space-around;
+				margin-bottom: 2vh;
+				#edad{
+					width: 10vh;
+				}
+			}
+			#mail{
+				height: 5vh;
+				margin: 0 1.5vh 0 1.5vh;
+			}
+			textarea{
+				margin-top: 2vh;
+			}
+			button{
+				margin-top: 2vh;
+				margin-bottom: 2vh;
+			}
+		}
+	}
+	#section42{
+		margin-bottom: 5vh;
+		a{
+			font-size: 25px;
+			transition: all 0.5s;
+
+		}
+		.icon-email{
+			color: grey;
+		}
+		.icon-whatsapp{
+			color: green;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		
+	
+	}
+}
+}
+
+
+
+
+@mixin tamaño-posicion($widthF, $heightF, $positionF){
+	width: $widthF;
+	height: $heightF;
+	position: $positionF;
+}
+
+
+
+
+
+
+
+.flecha{
+	@include tamaño-posicion(1vh, 15vh, fixed);
+	top: 50%;
+	right: -50px;
+	transition: all 0.35s;
+	overflow: hidden;
+		a{
+		text-decoration: none;
+		font-size: 4vh;
+		color: green;
+		background: #EA3131;
+		border-radius:50% 0 0 50%;
+		position: fixed;
+		top: 53%;
+		right: 0;
+		padding: 0.5vh 1.5vh 1vh 1vh;
+		transition: all 0.2s;
+			}
+		.dentro{
+			padding: 0 17vh 0 1vh;
+			p{
+				font-size: 11px;
+				margin: 0;
+				padding: 0;
+				}
+			}
+		}
+	.flecha:hover{
+		height: 15vh;
+		visibility: visible;
+		overflow: hidden;
+		width: 30%;
+		background: white;
+		box-shadow: 0.5px 1px 3px rgba(0,0,0,0.5);		
+		border-radius: 5px;
+			}
+	.flecha:hover a{
+		margin-right: 2vh;
+		border-radius: 50%;	
+		border: 1px solid rgba(0,0,0,0.1);
+			}
+	.flecha a:hover{
+		color: white;
+		text-decoration: none;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+	height: 30vh;
+
+		.saliente{
+			@include tamaño-posicion(1vh, 50%, relative);
+			top: -28vh;
+			transition: all 1s;
+			overflow: hidden;
+			background-color: #633F23;
+			border-radius: 5px;
+
+				h5,p{
+					margin-left: 1vh;
+				}
+				h5{
+					border-bottom: 0.5px solid rgba(0,0,0,0.1);
+				}
+				p{
+					font-size: 12px;
+				}
+			}
+		.saliente:hover{
+			width: 40%;
+			height: 50%;
+			overflow: hidden;
+			background: white;
+			border-radius: 0 15px 15px 0;
+		}
+
+		#footer{
+			@include tamaño-posicion(100%, 30vh, relative);
+			color: white;
+			background-color: #5b2e0d;
+			display: grid;
+			grid-template-rows: 1fr 2fr 1fr;
+			grid-template-columns: 1fr 10fr 4fr 1fr ;
+			grid-template-areas:
+			"vacio titulo imagen vacioo"
+			"vacio logo imagen vacioo"
+			"vacio texto publi vacioo";
+			h4{
+				grid-area: titulo;
+				align-self: end;
+			}
+			.publi{
+				display: flex;
+				flex-direction:row;
+				grid-area: publi;
+				li{
+					margin-left: 1vh;
+					}
+				a{
+					text-decoration: none;
+					color: white;
+					}
+				}
+			p{
+				grid-area: texto;
+
+				}
+			
+			.imagenes{
+				grid-area: imagen;
+				align-self: center;
+
+				}
+			.logo{
+				grid-area: logo;
+				align-self: center;
+					a{
+					font-size: 35px;
+					color: white;
+					border-radius: 50%;
+					transition: all 0.5s;
+					padding: 5px;
+					}
+				a:hover{
+					background: rgba(0,0,0,0.3);
+					}
+				a:link{
+					text-decoration: none;
+					}
+				}
+			}
+
+}

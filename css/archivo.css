@@ -39,6 +39,142 @@ header {
       width: 400px;
       box-shadow: 0.5px 0.5px 2px black; }
 
+#grid {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "contenedor contenedor nadaa" "navegador navegador navegador" "nada seccion son"; }
+  #grid .container-fluid {
+    grid-area: contenedor; }
+  #grid #barras {
+    grid-area: seccion; }
+    #grid #barras div {
+      margin-top: 10vh; }
+  #grid #navegador {
+    grid-area: navegador;
+    position: sticky;
+    top: 0; }
+    #grid #navegador .navbar_color {
+      background: #95592B; }
+    #grid #navegador a {
+      font-size: 17px; }
+  #grid #redes_personales {
+    width: 40vh;
+    height: 15vh;
+    position: relative;
+    grid-area: nadaa;
+    box-shadow: 0.5px 0 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5vh; }
+    #grid #redes_personales div {
+      width: 35vh;
+      height: 4vh; }
+      #grid #redes_personales div span {
+        border-right: 1.5px solid brown;
+        padding-right: 2px; }
+      #grid #redes_personales div a {
+        text-decoration: none;
+        color: brown;
+        font-size: 17px; }
+  #grid #section41 form {
+    width: 45vh;
+    display: flex;
+    flex-direction: column; }
+    #grid #section41 form div {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 2vh; }
+      #grid #section41 form div #edad {
+        width: 10vh; }
+    #grid #section41 form #mail {
+      height: 5vh;
+      margin: 0 1.5vh 0 1.5vh; }
+    #grid #section41 form textarea {
+      margin-top: 2vh; }
+    #grid #section41 form button {
+      margin-top: 2vh;
+      margin-bottom: 2vh; }
+  #grid #section42 {
+    margin-bottom: 5vh; }
+    #grid #section42 a {
+      font-size: 25px;
+      transition: all 0.5s; }
+    #grid #section42 .icon-email {
+      color: grey; }
+    #grid #section42 .icon-whatsapp {
+      color: green; }
+    #grid #section42 a:hover {
+      text-decoration: none; }
+
+.flecha {
+  width: 1vh;
+  height: 15vh;
+  position: fixed;
+  top: 50%;
+  right: -50px;
+  transition: all 0.35s;
+  overflow: hidden; }
+  .flecha a {
+    text-decoration: none;
+    font-size: 4vh;
+    color: green;
+    background: #EA3131;
+    border-radius: 50% 0 0 50%;
+    position: fixed;
+    top: 53%;
+    right: 0;
+    padding: 0.5vh 1.5vh 1vh 1vh;
+    transition: all 0.2s; }
+  .flecha .dentro {
+    padding: 0 17vh 0 1vh; }
+    .flecha .dentro p {
+      font-size: 11px;
+      margin: 0;
+      padding: 0; }
+
+.flecha:hover {
+  height: 15vh;
+  visibility: visible;
+  overflow: hidden;
+  width: 30%;
+  background: white;
+  box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
+
+.flecha:hover a {
+  margin-right: 2vh;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.flecha a:hover {
+  color: white;
+  text-decoration: none; }
+
+h2 span {
+  color: brown; }
+
+form {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas: "usuario" "completar" "enviar";
+  justify-content: start;
+  align-items: center;
+  margin-left: 2%; }
+  form input {
+    grid-area: usuario;
+    transition: all 1s; }
+  form input:focus {
+    width: 400px;
+    font-size: 20px; }
+  form textarea {
+    grid-area: completar; }
+  form button {
+    grid-area: enviar; }
+
 h2 {
   animation-duration: 2s;
   animation-name: aparecer;

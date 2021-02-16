@@ -26,10 +26,15 @@
 	      position: relative; 
 	 	 }
 	  </style>
-	  
+		  <script>
+		$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip();   
+		});
+		</script>
+
 
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 	
 	<header>
@@ -41,56 +46,137 @@
 				<input type="text" name="bsucar" placeholder="¿Que receta estas buscando?" class="header_nav_input" autocomplete="off">
 			</div>
 			<ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="nosotros.html">Nosotros</a></li>
-				<li><a href="otro.html">Dudas</a></li>
-				<li><a href="#ayudanos">Ayudanos</a></li>
+				<li><a href=#categorias_inicio>Inicio</a></li>
+				<li><a href=#nosotros_inicio>Nosotros</a></li>
+				<li><a href=#contactanos_inicio>Contacto</a></li>
+				<li><a href=# id="registrate">Registrate</a></li>
 			</ul>	
-			<!--
-			<a id="a">Categorias
-				<div>sisiisisisiis</div>
-			</a>
-			-->
 		</nav>
 	</header>
 
+
+
+
+
+
+
+
+
 	<main>
-		<h2>Destacados de la semana</h2>
-		<section id="main_destacados">
-			<div class="main_destacados_cajas">
-				<a href=""><img src="img/clerico.jpg" width="200" height="200">
-				<div>Clerico navideño</div>
-				<p>El clericó es una bebida alcohólica frutal consumida en Latinoamérica, allí tiene sus orígenes. Se elabora especialmente en los días del verano en el hemisferio sur, cercanos a las fiestas de fin de año.
-				</p>
-					</a>
+		<section>
+			<div id="inicio_posicion">
+
+				<div class="logo_y_titulo">
+				<img src="img/rechu.jpg">
+				<h1>Bienvenidos</h1>
+				</div>
+		
+
+
+				<div id="demo" class="carousel slide" data-ride="carousel">
+				  <ul class="carousel-indicators">
+				    <li data-target="#demo" data-slide-to="0" class="active"></li>
+				    <li data-target="#demo" data-slide-to="1"></li>
+				    <li data-target="#demo" data-slide-to="2"></li>
+				  </ul>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="img/veggie.jpg" alt="Los Angeles">
+				      <div class="carousel-caption">
+				        <h3>Los Angeles</h3>
+				        <p>We had such a great time in LA!</p>
+				      </div>   
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/gluten.jpg" alt="Chicago">
+				      <div class="carousel-caption">
+				        <h3>Chicago</h3>
+				        <p>Thank you, Chicago!</p>
+				      </div>   
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/postre.jpg" alt="New York">
+				      <div class="carousel-caption">
+				        <h3>New York</h3>
+				        <p>We love the Big Apple!</p>
+				      </div>   
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+				    <span class="carousel-control-prev-icon"></span>
+				  </a>
+				  <a class="carousel-control-next" href="#demo" data-slide="next">
+				    <span class="carousel-control-next-icon"></span>
+				  </a>
+				</div>
+
+				<div class="mas_buscados">
+					<h6>BUSQUEDAS EN TENDENCIAS</h6>
+					<div class="mas_buscados_alineacion">
+					<a href="">brownie oreo</a>
+					<a href="">ensalada cesar</a>
+					<a href="">cheesecake</a>
+					<a href="">anchoas</a>
+					<button>Categorías</button>
+					</div>
+					
+				</div>
+
+				<div class="banner">
+					<img src="img/banner2.jpg">
+					<div id="dentro">
+						<h3>Esperamos que les guste</h3>
+						<p>Nuestra pagina cuenta con una extensa variedad de comidad para que disfrutes sin moverte de tu casa. Ya sea siguiendo nuestro catalogo de recetas o pidiendo nuestros hermosos postres por delivery!</p>
+					</div>
+				</div>
+
 			</div>
-			<div class="main_destacados_cajas">
-				<a href=""><img src="img/viteltone.jpeg" width="200" height="200">
-				<div>Vitel tone</div>
-				<p>El vitel toné es un plato típico de la gastronomía de Italia, de la región de Piamonte. 
-					También es muy popular en <b>Argentina</b>.​Se prepara con carne vacuna, acompañada de una salsa cuyos ingredientes principales son yemas de huevo, lomitos de atún, aceite vegetal, mostaza y anchoas.</p>
-					</a>
+	</section>
+
+
+		<div id="categorias_inicio" class="secciones_titulos">
+		<h1>Categorias</h1>
+		</div>
+
+		<h2>Disponemos de esta variedad de recetas</h2>
+		<section class="categorias_imagenes_posicion">
+			<div class="categorias_imagenes_pie">
+			<a href="" data-toggle="tooltip" title="11 recetas">
+			<img src="img/veggie.jpg">
+			</a>
+			<p>Comidas Veggie</p>
 			</div>
-			<div class="main_destacados_cajas">
-				<a href=""><img src="img/pandulce.png" width="200" height="200">
-				<div>Pan dulce</div>
-				<p>El panettone o panetone, llamado panetón, pan dulce o pan de pascua en países hispanohablantes, es un bollo hecho con una masa de tipo brioche, relleno con pasas y frutas confitadas. Tiene forma de cúpula y la masa se elabora con harina de fuerza, masa madre o levadura fresca, huevos, mantequilla y azúcar.</p>
-				</a>
+
+			<div class="categorias_imagenes_pie">
+			<a href="" data-toggle="tooltip" title="8 recetas">
+			<img src="img/gluten.jpg">
+			</a>
+			<p>Comidas Gluten free</p>
 			</div>
-			<div class="main_destacados_cajas">
-				<a href=""><img src="img/rabas.jpg" width="200" height="200">
-				<div>Rabas a la milanesa</div>
-				<p>Los calamares fritos (en ocasiones también llamados calamares a la romana o rabas) son un producto frito preparado a base de calamares fritos rebozados o pulpo rebozado o en harina que se puede encontrar en muchos bares y restaurantes de los países que disfrutan de la cocina mediterránea y atlántica.</p>
-				</a>
+
+			<div class="categorias_imagenes_pie">
+			<a href="" data-toggle="tooltip" title="18 recetas">
+			<img src="img/postre.jpg">
+			</a>
+			<p>Postres</p>
+			</div>
+
+			<div class="categorias_imagenes_pie">
+			<a href="" data-toggle="tooltip" title="20 recetas">
+			<img src="img/company.png">
+			</a>
+			<p>Comidas Varias</p>
 			</div>
 		</section>
-
-
-	<section id="grid">
+			
+	<div id="nosotros_inicio" class="secciones_titulos">
+		<h1>Nosotros</h1>
+	</div>
+	<section id="nosotros_grid">
 			<div class="container-fluid">
-		  		<h1>Estos somos los dueños de la pagina</h1>
+		  		<h1>Somos los dueños de la pagina</h1>
 		 	 	<p>Somos un un par de emprendedores que apuestan por sus sueños. Amantes de la concina y de hacer feliz a nustros clientes con la increible variedad de postres que podemos ofrecerles. Llevamos muchos años en este rubro por que podemos decir, por el momento, que no nos equivocamos.
-							Esperamos poder seguir haciendo lo que mas nos gusta por mucho tiempo y esperamos seguir creciendo de la mano de ustedes y todo el apoyo que nos brindan</p>
+				Esperamos poder seguir haciendo lo que mas nos gusta por mucho tiempo y esperamos seguir creciendo de la mano de ustedes y todo el apoyo que nos brindan</p>
 			</div>
 
 			<div id="redes_personales">
@@ -136,7 +222,7 @@
 
 
 			<div id="barras">
-				<div id="section1" class="		container-fluid">
+				<div id="section1" class="container-fluid">
 				  <h1>¿Quines somos?</h1>
 				  <p>Somos dos chicos como ustedes apacionados de nuestro trabajo, con intensiones de ayudarte a dar tu primer gran paso en este nuevo mundo, que es el emprendimiento.
 				  De esta manera seras capaz de manejar tus propios tiempos, sin jefes y con un ambiente de trabajado super personalizado.</p>
@@ -153,6 +239,13 @@
 				  <p>A mi parecer esta pregunta no tiene una respuesta concreta, ya que es muy personal y depende mucho del tipo de emprendimiento.</p>
 				  <p>Un consejo muy personal seria que empiecen de a poco, paso a paso. Siempre es dificil salir de nuestra zona de confort, por lo que hay que tratar de tener siempre la cabeza puesta en el objetivo, y no en los obstaculos que nos vayan presentando</p>
 				</div>
+
+
+
+
+
+
+
 				<div id="section41" class="container-fluid">
 					<h2>Formulario</h2>
 					<p>Ingresa tu formulario y nos contactaremos con vos!</p>
@@ -185,19 +278,40 @@
 		
 		</section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
+		<div id="contactanos_inicio" class="secciones_titulos">
+		<h1>Contactanos</h1>
+	</div>
 
 
+	<section id="dudas_formulario">
 	
 		<h2>Queremos que nos comentes todas tus inquietudes <span class="icon-angellist"></span></h2>
 		<form id="formulario">
-			<input type="text" name="usuario" placeholder="Ingrese aqui el nombre su nombre..." autocomplete="off">
+			<input type="text" name="usuario" placeholder="Ingrese aqui su nombre..." autocomplete="off">
 			<textarea placeholder="Espacio dedicado a dudas/ inquietudes..." cols="40vh" rows="10vh"></textarea>
 			 <button type="button" class="btn btn-primary" >
 				    Enviar
 				  </button>
-
 		</form>
+	</section>
+
+
+
 
 
 
@@ -212,7 +326,7 @@
 			<p>Llevando dos pan dulce oreo y un budin a eleccion, te regalamos 6 conitos rellenos!</p>
 		</div>
 	</div>
-	
+
 	<footer>
 		<div id="footer">
 			<h4>Seguinos</h4>
@@ -238,10 +352,9 @@
 			</div>
 		</div>
 		<div class="saliente">
-					<h5>Queremos recordarte las uevas novedades</h5>
+			<h5>Queremos recordarte las nuevas novedades</h5>
 					
-					<p>Vamos a estar subiendo mucho contenido a nuestras redes sociales, y se vienen sorpresas para ustedes. Esten atentos!
-					</p>
+			<p>Vamos a estar subiendo mucho contenido a nuestras redes sociales, y se vienen sorpresas para ustedes. Esten atentos!</p>
 		</div>
 
 	</footer>

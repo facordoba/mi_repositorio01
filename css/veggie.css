@@ -3,64 +3,97 @@
   padding: 0; }
 
 header {
-  background-color: #5b2e0d;
-  position: relative; }
+  background-color: #7C3679;
+  position: absolute;
+  width: 100%; }
   header nav {
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between; }
-    header nav #logoInicio {
-      background-color: #905C39; }
+    header nav #header_nav_logo {
+      background-color: #975694; }
     header nav ul {
       display: flex;
       flex-direction: row;
       list-style-type: none;
-      margin-right: 3%; }
+      margin: 0 1.5vh 0 0;
+      position: absolute;
+      right: 2vh; }
       header nav ul li a {
         color: white;
         text-decoration: none;
-        font-size: 18px;
-        padding: 5px; }
+        font-size: 3vh;
+        padding: 1vh; }
       header nav ul li a:hover {
-        background-color: #896A54; }
-    header nav .img {
+        background-color: #975694;
+        border-radius: 1vh;
+        text-decoration: none;
+        color: white; }
+      header nav ul #registrate {
+        border: solid 2.5px #473648;
+        font-size: 3.2vh;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        transition: all 0.2s; }
+      header nav ul #registrate:hover {
+        font-size: 3.21vh;
+        text-decoration: underline; }
+    header nav .header_nav_input {
       padding-left: 10px;
       outline: none;
-      font-size: 18px;
-      border-radius: 15px;
+      font-size: 2.7vh;
+      border-radius: 2vh;
       color: black;
-      border: 3px solid #896A54;
+      border: 0.5vh solid #975694;
       transition: all 1s;
-      width: 200px; }
-    header nav .img:focus {
-      width: 400px;
+      width: 30vh; }
+    header nav .header_nav_input:focus {
+      width: 60vh;
       box-shadow: 0.5px 0.5px 2px black; }
-    header nav .img:hover {
-      width: 400px;
+    header nav .header_nav_input:hover {
+      width: 60vh;
       box-shadow: 0.5px 0.5px 2px black; }
 
-main h2 span {
-  color: brown; }
+#botonPrincipal {
+  display: none; }
 
-main form {
-  display: grid;
-  grid-auto-columns: auto;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-areas: "usuario" "completar" "enviar";
-  justify-content: start;
-  align-items: center;
-  margin-left: 2%; }
-  main form input {
-    grid-area: usuario;
-    transition: all 1s; }
-  main form input:focus {
-    width: 400px;
-    font-size: 20px; }
-  main form textarea {
-    grid-area: completar; }
-  main form button {
-    grid-area: enviar; }
+.botonFlotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+.redes a, .icon-plus-circle {
+  display: block;
+  text-decoration: none;
+  background-color: #975694;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s; }
+
+.redes a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #975694; }
+
+.redes a {
+  opacity: 0;
+  visibility: hidden; }
+
+#botonPrincipal:checked ~ .redes a {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 10px; }
+
+#botonPrincipal:checked ~ .botonPrincipal .icon-plus-circle {
+  font-size: 17px;
+  transform: rotate(137deg); }
 
 footer {
   height: 30vh; }
@@ -68,10 +101,10 @@ footer {
     width: 1vh;
     height: 50%;
     position: relative;
-    top: -28vh;
+    top: -30vh;
     transition: all 1s;
     overflow: hidden;
-    background-color: #633F23;
+    background-color: #975694;
     border-radius: 5px; }
     footer .saliente h5, footer .saliente p {
       margin-left: 1vh; }
@@ -86,11 +119,10 @@ footer {
     background: white;
     border-radius: 0 15px 15px 0; }
   footer #footer {
-    width: 100%;
     height: 30vh;
-    position: relative;
+    width: 100%;
     color: white;
-    background-color: #5b2e0d;
+    background-color: #7C3679;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 10fr 4fr 1fr;

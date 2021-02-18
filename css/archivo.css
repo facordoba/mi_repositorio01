@@ -4,7 +4,7 @@
 
 header {
   background-color: #7C3679;
-  position: absolute;
+  position: relative;
   width: 100%; }
   header nav {
     width: 60%;
@@ -14,6 +14,14 @@ header {
     justify-content: space-between; }
     header nav #header_nav_logo {
       background-color: #975694; }
+    header nav #header_nav_logo img{
+    
+
+
+      width: 25vh;
+      height: 10vh
+        
+    }
     header nav ul {
       display: flex;
       flex-direction: row;
@@ -60,8 +68,11 @@ main section #inicio_posicion {
   display: grid;
   height: 100vh;
   grid-template-rows: 1fr 1fr 3fr 1fr;
-  grid-template-columns: 1fr 3fr 3fr 1fr;
-  grid-template-areas: "vacios logoytitulo logoytitulo nadas" "demo masbuscados masbuscados nadas" "vacio1 vacio2 vacio2 nadas" "vacio1 banner banner nadas"; }
+  grid-template-columns: auto 3fr 3fr 1fr;
+  grid-template-areas: "vacios logoytitulo logoytitulo nadas"
+ "demo masbuscados masbuscados nadas"
+ "vacio1 vacio2 vacio2 nadas"
+ "vacio1 banner banner nadas"; }
   main section #inicio_posicion .logo_y_titulo {
     grid-area: logoytitulo;
     display: flex;
@@ -74,12 +85,15 @@ main section #inicio_posicion {
     main section #inicio_posicion .logo_y_titulo h1 {
       color: #473648; }
   main section #inicio_posicion #demo {
-    grid-area: demo;
-    width: 25vh;
-    height: 25vh;
+    grid-area: vacios;
+    width: 35vh;
+    height: 35vh;
+    margin: 0.5vh;
+    box-shadow: 0 0 2vh rgba(0,0,0,0.4);
     background-color: red; }
     main section #inicio_posicion #demo h3, main section #inicio_posicion #demo p {
-      color: black; }
+      color: black;
+      font-size: 2.5vh; }
   main section #inicio_posicion .mas_buscados {
     grid-area: masbuscados;
     justify-self: center;
@@ -107,15 +121,17 @@ main section #inicio_posicion {
   main section #inicio_posicion .banner {
     grid-area: banner;
     margin: 1vh;
-    height: 35vh; }
+    height: 32vh; 
+    width: 80%;
+    justify-self: center; }
     main section #inicio_posicion .banner img {
       width: 100%;
       height: 100%; }
     main section #inicio_posicion .banner #dentro {
-      width: 100%;
+      width: 80%;
       height: 100%;
       position: relative;
-      top: -35vh;
+      top: -32vh;
       left: 0px;
       background-color: rgba(0, 0, 0, 0.02);
       opacity: 0;
@@ -123,16 +139,20 @@ main section #inicio_posicion {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto 1fr auto;
-      grid-template-areas: "titulo" "vacio" "texto";
+      grid-template-areas: "titulo"
+ "vacio"
+ "texto";
       color: white; }
-      main section #inicio_posicion .banner #dentro h1 {
+      main section #inicio_posicion .banner #dentro h3 {
         grid-area: titulo;
         color: black;
-        text-align: center; }
+        margin: 1vh;
+        font-size: 2vh; }
       main section #inicio_posicion .banner #dentro p {
         grid-area: texto;
         padding: 2vh;
-        color: black; }
+        color: rgba(9,9,9,9);
+        font-size: 2vh; }
   main section #inicio_posicion .banner:hover #dentro {
     opacity: 1;
     visibility: visible;
@@ -160,13 +180,16 @@ main .secciones_titulos {
   margin: 3vh 0 3vh 0; }
   main .secciones_titulos h1 {
     color: black;
-    padding: 2vh; }
+    padding: 2vh;
+    font-size: 6vh; }
 
 main #nosotros_grid {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "contenedor contenedor nadaa" "navegador navegador navegador" "nada seccion son"; }
+  grid-template-areas: "contenedor contenedor nadaa"
+ "navegador navegador navegador"
+ "nada seccion son"; }
   main #nosotros_grid .container-fluid {
     grid-area: contenedor; }
   main #nosotros_grid #barras {
@@ -182,7 +205,7 @@ main #nosotros_grid {
     main #nosotros_grid #navegador .navbar_color {
       background: #975694; }
     main #nosotros_grid #navegador a {
-      font-size: 17px; }
+      font-size: 2.4vh; }
   main #nosotros_grid #redes_personales {
     width: 40vh;
     height: 15vh;
@@ -199,11 +222,20 @@ main #nosotros_grid {
       height: 4vh; }
       main #nosotros_grid #redes_personales div span {
         border-right: 1.5px solid brown;
-        padding-right: 2px; }
+        padding-right: 2px;
+        font-size: 2vh; }
+
+
       main #nosotros_grid #redes_personales div a {
         text-decoration: none;
         color: brown;
-        font-size: 17px; }
+        font-size: 2.5vh; }
+        main #nosotros_grid .container-fluid h1{
+          font-size: 5vh;
+        }
+        main #nosotros_grid .container-fluid p{
+          font-size: 2.5vh;
+        }
   main #nosotros_grid #section41 form {
     width: 45vh;
     display: flex;
@@ -211,10 +243,17 @@ main #nosotros_grid {
     margin-left: 2vh; }
     main #nosotros_grid #section41 form div {
       margin: 0 0 1vh 0; }
+      main #nosotros_grid #section41 form input, label {
+      font-size: 2.4vh; }
+      main #nosotros_grid #section41 form legend {
+      font-size: 3.2vh; }
       main #nosotros_grid #section41 form div #edad {
-        width: 10vh; }
+        width: 10vh;
+        font-size: 2.4vh; }
       main #nosotros_grid #section41 form div #mail {
-        height: 5vh; }
+        height: 5vh;
+        font-size: 2.4vh; }
+
     main #nosotros_grid #section41 form textarea {
       margin-top: 2vh; }
     main #nosotros_grid #section41 form button {
@@ -223,7 +262,7 @@ main #nosotros_grid {
   main #nosotros_grid #section42 {
     margin-bottom: 5vh; }
     main #nosotros_grid #section42 a {
-      font-size: 25px;
+      font-size: 3vh;
       transition: all 0.5s; }
     main #nosotros_grid #section42 .icon-email {
       color: grey; }
@@ -234,12 +273,15 @@ main #nosotros_grid {
 
 main #dudas_formulario h2 span {
   color: brown; }
-
+main #dudas_formulario h2 {
+  font-size: 5vh; }
 main #dudas_formulario form {
   display: grid;
   grid-auto-columns: auto;
   grid-template-rows: 1fr 3fr 1fr;
-  grid-template-areas: "usuario" "completar" "enviar";
+  grid-template-areas: "usuario"
+ "completar"
+ "enviar";
   justify-content: start;
   align-items: center;
   margin-left: 2%; }
@@ -247,8 +289,8 @@ main #dudas_formulario form {
     grid-area: usuario;
     transition: all 1s; }
   main #dudas_formulario form input:focus {
-    width: 400px;
-    font-size: 20px; }
+    width: 50vh;
+    font-size: 3vh; }
   main #dudas_formulario form textarea {
     grid-area: completar; }
   main #dudas_formulario form button {
@@ -287,7 +329,7 @@ h2 {
   .flecha .dentro {
     padding: 0 17vh 0 1vh; }
     .flecha .dentro p {
-      font-size: 11px;
+      font-size: 1.6vh;
       margin: 0;
       padding: 0; }
 
@@ -340,29 +382,41 @@ footer {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 10fr 4fr 1fr;
-    grid-template-areas: "vacio titulo imagen vacioo" "vacio logo imagen vacioo" "vacio texto publi vacioo"; }
+    grid-template-areas: "vacio titulo imagen vacioo"
+ "vacio logo imagen vacioo"
+ "vacio texto publi vacioo"; }
     footer #footer h4 {
       grid-area: titulo;
-      align-self: end; }
+      align-self: end;
+      font-size: 4vh; }
     footer #footer .publi {
       display: flex;
       flex-direction: row;
       grid-area: publi; }
       footer #footer .publi li {
-        margin-left: 1vh; }
+        margin-left: 1vh;
+        font-size: 2.2vh; }
       footer #footer .publi a {
         text-decoration: none;
-        color: white; }
+        color: white;
+        font-size: 2.2vh; }
     footer #footer p {
-      grid-area: texto; }
+      grid-area: texto;
+      font-size: 2.2vh; }
     footer #footer .imagenes {
       grid-area: imagen;
       align-self: center; }
+      footer #footer .imagenes #logo_tamanio {
+        width: 33vh;
+        height: 12vh; }
+      footer #footer .imagenes #footer_imagen_tamanio {
+        width: 11vh;
+        height: 11vh; }
     footer #footer .logo {
       grid-area: logo;
       align-self: center; }
       footer #footer .logo a {
-        font-size: 35px;
+        font-size: 5vh;
         color: white;
         border-radius: 50%;
         transition: all 0.5s;

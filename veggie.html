@@ -32,6 +32,17 @@
 		});
 		</script>
 
+		<script>
+				$(document).ready(function(){
+				  $("#myInput").on("keyup", function() {
+				    var value = $(this).val().toLowerCase();
+				    $("#myTable tr").filter(function() {
+				      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				    });
+				  });
+				});
+		</script>
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -40,20 +51,208 @@
 	<header>
 		<nav>
 			<div id="header_nav_logo">
-			<img src="img/logo.png" width="150" height="70">
+			<img src="img/logo.png">
 			</div>
 			<div>
 				<input type="text" name="bsucar" placeholder="¿Que receta estas buscando?" class="header_nav_input" autocomplete="off">
 			</div>
 			<ul>
 				<li><a href=index.html>Inicio</a></li>
-				<li><a href=#nosotros_inicio>Nosotros</a></li>
-				<li><a href=#contactanos_inicio>Contacto</a></li>
-				<li><a href=# id="registrate">Registrate</a></li>
+				<li><a href=gluten.html>Gluten Free</a></li>
+				<li><a href=postre.html>Postres</a></li>
+				<li><a href=vario.html>Varios</a></li>
 			</ul>	
 		</nav>
 	</header>
 
+	<main>
+		<section>
+			<div class="caja_completa_receta">
+				<div class="titulo_imagen">
+					<h2>1. Falafel</h2>
+					<img src="img/falafel.jpg">
+				</div>
+				<div class="ingredientes_pasoapaso">
+					<div>
+						<h3>Ingledientes</h3>
+						<p><b>Para 2 personas</b></p>
+						<p>Garbanzos ......................................................................................................... <b>240 g</b></p>
+						<p>Rebanadas de pan(preferiblemente integral) ..................................... <b>2</b></p>
+						<p>Cebolla ................................................................................................................ <b>50 g</b></p>
+						<p>Dientes de ajo .................................................................................................. <b>2</b></p>
+						<p>Cucharadita de comino ................................................................................ <b>1</b></p>
+						<p>Cucharadita de pimenton ........................................................................... <b>1/2</b></p>
+						<p>Manojo de ciclantro fresco ......................................................................... <b>1</b></p>
+						<p>Manojo de perejil fresco .............................................................................. <b>1</b></p>
+						<p>Aceite de oliva extra virgen ......................................................................... <b>30 ml</b></p>
+						<p>Cucharadita de levadura (preferiblemente de panadero) .............. <b>1</b></p>
+						<p>Agua ........................................................................................................... (opcional)</p>
+						
+					</div>
+					<div>
+						<h3>Como hacer Falafel</h3>
+						<p><b>Dificultad: Facil</b></p>
+						<p><b>Tiempo total</b> .............. <b>35 m</b></p>
+						<p>Elaboracion ............ 10 m</p>
+						<p>Cocción ............ 15 m</p>
+						<p>Reposo ............ 10 m</p>
+						<p>Lavar los garbanzos escurridos y triturar todos los ingredientes en el robot Magimix Cook Expert o robot de cocina, ajustando la textura con agua si fuera necesario. Tomamos pequeñas porciones de la masa y formamos bolitas de igual tamaño. Conviene humedecerse las manos para que la masa no se nos pegue. Las colocamos sobre una bandeja de horno cubierta con papel sulfurizado y aplastamos ligeramente con las manos. Dejamos reposar una hora en la nevera o en una zona fría de la cocina. Cocemos en horno pre calentado a 180ºC, arriba y abajo con calor tradicional, durante unos 20 minutos o hasta que estén dorados. Volteamos cada uno a media cocción, es decir, después de los primeros 10 minutos. Retiramos del horno y servimos inmediatamente.</p>
+					</div>
+				</div>
+			</div>
+			<div class="caja_completa_receta">
+				<div class="titulo_imagen">
+					<h2>2. Curry de garbanzo con mango</h2>
+					<img src="img/curry.jpg">
+				</div>
+				<div class="ingredientes_pasoapaso">
+					<div>
+						<h3>Ingledientes</h3>
+						<p><b>Para 2 personas</b></p>
+						<p>Garbanzos cocidos .......................................................................................... <b>300 g</b></p>
+						<p>Dientes de ajo ................................................................................................... <b>2</b></p>
+						<p>Cebolla ................................................................................................................ <b>1</b></p>
+						<p>Cilantro en grano ............................................................................................. <b>2 g</b></p>
+						<p>Comino en grano ............................................................................................. <b>2 g</b></p>
+						<p>Hoja de corry o Laurel ................................................................................... <b>1</b></p>
+						<p>Guindillas frescas ............................................................................................. <b>2</b></p>
+						<p>Puerro pequeño ............................................................................................... <b>1</b></p>
+						<p>Zanahoria ............................................................................................................ <b>1</b></p>
+						<p>Apio ....................................................................................................................... <b>1</b></p>
+						<p>Mazcla de curry molido ................................................................................. <b>5 g</b></p>
+						<p>Mango maduro ................................................................................................ <b>1</b></p>
+						<p>Leche de coco ................................................................................................... <b>200 g</b></p>
+						<p>Jugo de limon ................................................................................................... <b>5 ml</b></p>
+						<p>Perejil fresco o cilantro</p>
+						<p>Pminienta negra y sal</p>
+						<p>Aceite de oliva</p>
+						
+					</div>
+					<div>
+						<h3>Como hacer Curry de garbanzo</h3>
+						<p><b>Dificultad: Dificil</b></p>
+						<p><b>Tiempo total</b> .............. <b>35 m</b></p>
+						<p>Elaboracion ............ 10 m</p>
+						<p>Cocción ............ 15 m</p>
+						<p>Reposo ............ 10 m</p>
+						<p>Picar muy finos los ajos, el jengibre pelado y la cebolleta. Lavar y picar las verduras, o cortar en bastones. Sacar la pulpa del mango y triturar con sus jugos para que quede cremosa. Calentar aceite en sartén o cazuela con el comino, cilantro y las hojas de curry o laurel, hasta que suelten su aroma. Añadir la pasta de ajo y cebolleta y remover bien a fuego suave durante unos 8-10 minutos. Incorporar las verduras. Salpimentar ligeramente y agregar la mezcla de curry. Saltear a fuego medio durante 5 minutos y echar la pulpa de mango, la leche de coco y remover bien. Llevar a ebullición, bajar el fuego y tapar. Cocinar el conjunto unos 10 minutos. Añadir los garbanzos y volver a tapar. Cocinar a fuego suave durante unos 10 minutos más, ajustando la cantidad de líquido con agua o caldo. Añadir al final zumo de limón y corregir el punto de sal. Servir con perejil o cilantro fresco.</p>
+					</div>
+				</div>
+			</div>
+			<div class="caja_completa_receta">
+				<div class="titulo_imagen">
+					<h2 id="burritovegano">3. Burrito vegano</h2>
+					<img src="img/burrito.jpg">
+				</div>
+				<div class="ingredientes_pasoapaso">
+					<div>
+						<h3>Ingledientes</h3>
+						<p><b>Para 2 personas</b></p>
+						<p>Alubias negras ................................................................................................. <b>250 g</b></p>
+						<p>Hoja de laurel ................................................................................................... <b>1</b></p>
+						<p>Chile molido ..................................................................................................... <b>5 g</b></p>
+						<p>Acite de girasol ............................................................................................... <b>10 ml</b></p>
+						<p>Cebolla ............................................................................................................... <b>1</b></p>
+						<p>Morron rojo ...................................................................................................... <b>1</b></p>
+						<p>Morron verde ................................................................................................... <b>2</b></p>
+						<p>Aceite de oliva extra virgen ........................................................................ <b>5 ml</b></p>
+						<p>Sal de ajo ............................................................................................................ <b>3 g</b></p>
+						<p>Tortillas de trigo ............................................................................................... <b>4</b></p>
+						<p>Sal</p>
+						
+						
+					</div>
+					<div>
+						<h3>Como hacer Burrito vegano</h3>
+						<p><b>Dificultad: Facil</b></p>
+						<p><b>Tiempo total</b> .............. <b>35 m</b></p>
+						<p>Elaboracion ............ 10 m</p>
+						<p>Cocción ............ 15 m</p>
+						<p>Reposo ............ 10 m</p>
+						<p>Lavamos las alubias y las ponemos en una olla a presión cubiertas con agua y el laurel. Cocemos en la posición 2 durante 30 minutos. Se pueden poner en remojo la noche anterior, lo que aceleraría el tiempo de cocción. Queremos que queden tiernas. Escurrimos y reservamos el líquido sobrante. Calentamos el aceite en una cacerola, agregamos la mitad del chile, las alubias y sazonamos. Removemos y aplastamos con un tenedor. Incorporamos parte del líquido reservado hasta obtener un puré suave pero compacto. Para el relleno, pelamos la cebolla y la cortamos en juliana. Lavamos los pimientos, retiramos el pedúnculo y las semillas, cortamos por la mitad y retiramos los filamentos. Cortamos en juliana gruesa. En una sartén con aceite las salteamos a fuego medio-alto y retiramos. Limpiamos la sartén con papel y calentamos ligeramente las tortillas de trigo. Extendemos una capa de frijoles en cada tortilla y encima las verduras. Cerramos las tortillas, doblando dos extremos opuestos y a continuación, doblando los otros dos lados sobre estos, a modo de sobre. Tostamos ligeramente por ambos lados, en la sartén y los servimos inmediatamente.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="caja_completa_receta">
+				<div class="titulo_imagen">
+					<h2>4. Hamburguesa de palta y quinoa</h2>
+					<img src="img/hamburguesa.jpg">
+				</div>
+				<div class="ingredientes_pasoapaso">
+					<div>
+						<h3>Ingledientes</h3>
+						<p><b>Para 5 personas</b></p>
+						<p>Palta madura ...................................................................................................... <b>2-3</b></p>
+						<p>Quinoa cocida ................................................................................................... <b>160 g</b></p>
+						<p>Cebolla morada ................................................................................................ <b>150 g</b></p>
+						<p>Media lima  .......................................................................................................... <b>2</b></p>
+						<p>Aji picante verde .............................................................................................. <b>2</b></p>
+						<p>Cilantro fresco ................................................................................................... <b>50 g</b></p>
+						<p>Cucharadita de ajo granulado ..................................................................... <b>1</b></p>
+						<p>Pan rallado  .......................................................................................................... <b>150 g</b></p>
+						<p>Aceite de oliva extra virgen </p>
+						<p>Pimienta negra </p>
+						<p>Sal</p>
+						
+						
+					</div>
+					<div>
+						<h3>Como hacer Hamburguesa</h3>
+						<p><b>Dificultad: Media</b></p>
+						<p><b>Tiempo total</b> .............. <b>35 m</b></p>
+						<p>Elaboracion ............ 10 m</p>
+						<p>Cocción ............ 15 m</p>
+						<p>Reposo ............ 10 m</p>
+						<p>Cortamos el aguacate por la mitad y sacamos la carne. Picamos la cebolla. Lavamos las hojas de cilantro, secamos y picamos. Lavamos el pimiento verde picante, retiramos el pedúnculo y las semillas y picamos finamente. Mezclamos todos los ingredientes en un cuenco. Añadimos la quinoa cocida, el ajo granulado, el pan rallado, la ralladura de la media lima y su zumo y salpimentamos. Removemos bien hasta obtener una masa homogénea y espesa. Podemos añadir más pan rallado si la notamos demasiado blanda, poco a poco y con cuidado. Dividimos la masa en ocho porciones, les damos forma de mini hamburguesa y empanamos. Freímos en una sartén con un poco de aceite de oliva bien caliente. Volteamos para que se hagan por las dos caras y, cuando estén doradas, las retiramos. Montamos las mini hamburguesas al gusto.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="caja_completa_receta">
+				<div class="titulo_imagen">
+					<h2 id="tacosveganos">5. Tacos veganos de garbanzo y soja</h2>
+					<img src="img/tacos.jpg">
+				</div>
+				<div class="ingredientes_pasoapaso">
+					<div>
+						<h3>Ingledientes</h3>
+						<p><b>Para 3-4 personas</b></p>
+						<p>Comino molido ................................................................................................ <b>5 g</b></p>
+						<p>Diente de ajo ..................................................................................................... <b>1</b></p>
+						<p>Cebolla morada ................................................................................................ <b>1</b></p>
+						<p>Pimenton dulce  ................................................................................................ <b>5 g</b></p>
+						<p>Canela molida  .................................................................................................... <b>2 g</b></p>
+						<p>Oregano ............................................................................................................... <b>5 g</b></p>
+						<p>Cile chipotle en abodo  .................................................................................. <b>1</b></p>
+						<p>Tomate troceado natural  .............................................................................. <b>400 g</b></p>
+						<p>Garbanzos cocidos  .......................................................................................... <b>400 g</b></p>
+						<p>Taza de soja texturizada fina  ....................................................................... <b>1/3</b></p>
+						<p>Aceite de oliva extra virgen </p>
+						<p>Caldo de verdura </p>
+						<p>Pimienta negra </p>
+						<p>Sal</p>
+						<p>Pizca de azucar</p>
+
+						
+						
+					</div>
+					<div>
+						<h3>Como hacer Tacos de garbanzo y soja</h3>
+						<p><b>Dificultad: Media</b></p>
+						<p><b>Tiempo total</b> .............. <b>35 m</b></p>
+						<p>Elaboracion ............ 10 m</p>
+						<p>Cocción ............ 15 m</p>
+						<p>Reposo ............ 10 m</p>
+						<p>Cortamos el aguacate por la mitad y sacamos la carne. Picamos la cebolla. Lavamos las hojas de cilantro, secamos y picamos. Lavamos el pimiento verde picante, retiramos el pedúnculo y las semillas y picamos finamente. Mezclamos todos los ingredientes en un cuenco. Añadimos la quinoa cocida, el ajo granulado, el pan rallado, la ralladura de la media lima y su zumo y salpimentamos. Removemos bien hasta obtener una masa homogénea y espesa. Podemos añadir más pan rallado si la notamos demasiado blanda, poco a poco y con cuidado. Dividimos la masa en ocho porciones, les damos forma de mini hamburguesa y empanamos. Freímos en una sartén con un poco de aceite de oliva bien caliente. Volteamos para que se hagan por las dos caras y, cuando estén doradas, las retiramos. Montamos las mini hamburguesas al gusto.</p>
+					</div>
+				</div>
+			</div>
+
+
+
+		</section>
+	</main>
 
 
 
@@ -89,8 +288,8 @@
 			</div>
 
 			<div class="imagenes">
-				<img src="https://escuchara.com.ar/wp-content/uploads/2018/07/letrasalfondo-300x300.png" width="100" height="100">
-				<img src="img/logo.png" width="200" height="100">
+				<img src="https://escuchara.com.ar/wp-content/uploads/2018/07/letrasalfondo-300x300.png" id="footer_imagen_tamanio">
+				<img src="img/logo.png" id="logo_tamanio">
 			</div>
 			
 

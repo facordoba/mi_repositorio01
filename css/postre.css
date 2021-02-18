@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0; }
 
+/*arreglar logo*/
 header {
   background-color: #7C3679;
-  position: absolute;
+  position: relative;
   width: 100%; }
   header nav {
     width: 60%;
@@ -14,6 +15,9 @@ header {
     justify-content: space-between; }
     header nav #header_nav_logo {
       background-color: #975694; }
+      header nav #header_nav_logo .logo_tamanio {
+        width: 25vh;
+        height: 10vh; }
     header nav ul {
       display: flex;
       flex-direction: row;
@@ -31,15 +35,6 @@ header {
         border-radius: 1vh;
         text-decoration: none;
         color: white; }
-      header nav ul #registrate {
-        border: solid 2.5px #473648;
-        font-size: 3.2vh;
-        border-radius: 1vh;
-        margin-left: 1vh;
-        transition: all 0.2s; }
-      header nav ul #registrate:hover {
-        font-size: 3.21vh;
-        text-decoration: underline; }
     header nav .header_nav_input {
       padding-left: 10px;
       outline: none;
@@ -56,6 +51,69 @@ header {
       width: 60vh;
       box-shadow: 0.5px 0.5px 2px black; }
 
+main .caja_completa_receta .titulo_imagen {
+  margin: 2% 2% 2% 5%; }
+  main .caja_completa_receta .titulo_imagen h2 {
+    font-size: 5vh; }
+  main .caja_completa_receta .titulo_imagen img {
+    width: 70vh;
+    height: 70vh; }
+
+main .caja_completa_receta .ingredientes_pasoapaso {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  main .caja_completa_receta .ingredientes_pasoapaso p {
+    font-size: 2.5vh; }
+  main .caja_completa_receta .ingredientes_pasoapaso div {
+    border-right: solid 0.2vh rgba(0, 0, 0, 0.1);
+    padding: 1vh;
+    box-shadow: 0.5vh 0.1vh 1vh rgba(0, 0, 0, 0.4);
+    width: 45%; }
+  main .caja_completa_receta .ingredientes_pasoapaso h3 {
+    border-bottom: solid 0.5vh brown;
+    padding: 0.2vh;
+    font-size: 4.8vh; }
+
+#botonPrincipal {
+  display: none; }
+
+.botonFlotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+.redes a, .icon-plus-circle {
+  display: block;
+  text-decoration: none;
+  background-color: #975694;
+  color: #fff;
+  width: 9vh;
+  height: 9vh;
+  line-height: 9vh;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s; }
+
+.redes a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #975694; }
+
+.redes a {
+  opacity: 0;
+  visibility: hidden; }
+
+#botonPrincipal:checked ~ .redes a {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 10px; }
+
+#botonPrincipal:checked ~ .botonPrincipal .icon-plus-circle {
+  font-size: 3vh;
+  transform: rotate(137deg); }
+
 footer {
   height: 30vh; }
   footer .saliente {
@@ -70,9 +128,10 @@ footer {
     footer .saliente h5, footer .saliente p {
       margin-left: 1vh; }
     footer .saliente h5 {
-      border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); }
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+      font-size: 3vh; }
     footer .saliente p {
-      font-size: 12px; }
+      font-size: 2vh; }
   footer .saliente:hover {
     width: 40%;
     height: 50%;
@@ -87,29 +146,41 @@ footer {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 10fr 4fr 1fr;
-    grid-template-areas: "vacio titulo imagen vacioo" "vacio logo imagen vacioo" "vacio texto publi vacioo"; }
+    grid-template-areas: "vacio titulo imagen vacioo"
+ "vacio logo imagen vacioo"
+ "vacio texto publi vacioo"; }
     footer #footer h4 {
       grid-area: titulo;
-      align-self: end; }
+      align-self: end;
+      font-size: 4vh; }
     footer #footer .publi {
       display: flex;
       flex-direction: row;
       grid-area: publi; }
       footer #footer .publi li {
-        margin-left: 1vh; }
+        margin-left: 1vh;
+        font-size: 2.2vh; }
       footer #footer .publi a {
         text-decoration: none;
-        color: white; }
+        color: white;
+        font-size: 2.2vh; }
     footer #footer p {
-      grid-area: texto; }
+      grid-area: texto;
+      font-size: 2.2vh; }
     footer #footer .imagenes {
       grid-area: imagen;
       align-self: center; }
+      footer #footer .imagenes #logo_tamanio {
+        width: 33vh;
+        height: 12vh; }
+      footer #footer .imagenes #footer_imagen_tamanio {
+        width: 11vh;
+        height: 11vh; }
     footer #footer .logo {
       grid-area: logo;
       align-self: center; }
       footer #footer .logo a {
-        font-size: 35px;
+        font-size: 5vh;
         color: white;
         border-radius: 50%;
         transition: all 0.5s;
